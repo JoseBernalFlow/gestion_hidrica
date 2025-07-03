@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime, date
 import numpy as np
+import os
 
 # === Cargar datos ===
 df = pd.read_excel(
@@ -502,7 +503,7 @@ def update_graphs(estacion, start_date, end_date):
     
     return fig1, fig2, fig3, fig4, stats_cards, data_table
 
+
 if __name__ == '__main__':
-    print("🌊 Sistema de Gestión Hídrica iniciado")
-    print("📊 Dashboard disponible en: http://127.0.0.1:8050")
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8050))
+    app.run(debug=False, host="0.0.0.0", port=port)
