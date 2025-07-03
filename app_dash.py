@@ -8,7 +8,7 @@ import numpy as np
 
 # === Cargar datos ===
 df = pd.read_excel(
-    r"G:\Unidades compartidas\03. Proyectos\20. FLOW\FLOW-003 Sistema Gestión de la Información\10_Colaborativos\16_Solicituid_Ignacio_13jun2025\Pivot.xlsx"
+    "Pivot.xlsx"
 )
 
 # --- Preprocesamiento ---
